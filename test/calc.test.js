@@ -1,23 +1,20 @@
 /**
- * Tests for the statistics module.
+ * Tests for the calc module.
  *
  * @author Johan Leitet <johan.leitet@lnu.se>
  * @author Mats Loock <mats.loock@lnu.se>
- * @version 1.0.0
+ * @version 1.1.0
  */
 
-import chai from 'chai'
 import * as calc from '../src/calc.js'
-
-const expect = chai.expect
 
 // ------------------------------------------------------------------------------
 //  addNumbers
 // ------------------------------------------------------------------------------
 describe('addNumbers', () => {
   describe('return value', () => {
-    it('addNumbers() should return 42', () => {
-      expect(calc.addNumbers()).to.equal(42)
+    test('it should return 42', () => {
+      expect(calc.addNumbers()).toEqual(42)
     })
   })
 })

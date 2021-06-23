@@ -14,7 +14,7 @@
 </g>
 <g id="clust2" class="cluster"><title>cluster_test</title>
 <path fill="#ffffff" stroke="black" stroke-width="2" d="M20,-8C20,-8 76,-8 76,-8 82,-8 88,-14 88,-20 88,-20 88,-48 88,-48 88,-54 82,-60 76,-60 76,-60 20,-60 20,-60 14,-60 8,-54 8,-48 8,-48 8,-20 8,-20 8,-14 14,-8 20,-8"/>
-<text text-anchor="middle" x="48" y="-48.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="9.00">test</text>
+<text text-anchor="middle" x="48" y="-48.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="9.00">tests</text>
 </g>
 <!-- src/app.js -->
 <g id="node1" class="node"><title>src/app.js</title>
@@ -37,16 +37,16 @@
 <path fill="none" stroke="#999999" d="M75.3547,-85C80.378,-85 85.6797,-85 90.8363,-85"/>
 <polygon fill="#999999" stroke="#999999" points="90.9288,-86.7501 95.9288,-85 90.9287,-83.2501 90.9288,-86.7501"/>
 </g>
-<!-- test/hello.test.js -->
-<g id="node3" class="node"><title>test/hello.test.js</title>
-<g id="a_node3"><a xlink:href="test/hello.test.js" xlink:title="hello.test.js">
+<!-- tests/hello.test.js -->
+<g id="node3" class="node"><title>tests/hello.test.js</title>
+<g id="a_node3"><a xlink:href="tests/hello.test.js" xlink:title="hello.test.js">
 <path fill="#ffffcc" stroke="black" d="M74,-34C74,-34 22,-34 22,-34 19,-34 16,-31 16,-28 16,-28 16,-22 16,-22 16,-19 19,-16 22,-16 22,-16 74,-16 74,-16 77,-16 80,-19 80,-22 80,-22 80,-28 80,-28 80,-31 77,-34 74,-34"/>
 <text text-anchor="middle" x="48" y="-22.8" font-family="Helvetica,sans-Serif" font-size="9.00">hello.test.js</text>
 </a>
 </g>
 </g>
-<!-- test/hello.test.js&#45;&gt;src/hello.js -->
-<g id="edge2" class="edge"><title>test/hello.test.js&#45;&gt;src/hello.js</title>
+<!-- tests/hello.test.js&#45;&gt;src/hello.js -->
+<g id="edge2" class="edge"><title>tests/hello.test.js&#45;&gt;src/hello.js</title>
 <path fill="none" stroke="#999999" d="M60.0871,-34.1127C72.5215,-44.3328 92.7674,-60.9732 106.702,-72.4265"/>
 <polygon fill="#999999" stroke="#999999" points="105.835,-73.9786 110.809,-75.8015 108.057,-71.2747 105.835,-73.9786"/>
 </g>

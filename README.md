@@ -6,7 +6,7 @@ Komplettera funktionen `sayHello` i filen `src/hello.js`, så att funktionen ret
 
 ### Filer
 
-Modulerna `src/app.js` och `src/hello.js` samverkar enligt beroendediagrammet nedan. Du ser även `test/hello.test.js` (som du inte ska redigera), vilket är den modul som innehåller enhetstest som körs med `npm test`.
+Modulerna `src/app.js` och `src/hello.js` samverkar enligt beroendediagrammet nedan. Du ser även `tests/hello.test.js` (som du inte ska redigera), vilket är den modul som innehåller enhetstest som körs med `npm test`.
 
 ![Beroendediagram](/.readme/dependency-graph.svg)
 
@@ -29,9 +29,10 @@ npm install
 Exempelutskrift:
 
 ```shell
-npm notice created a lockfile as package-lock.json. You should commit this file.
+added 472 packages, and audited 473 packages in 16s
 
-added 278 packages from 164 contributors and audited 600 packages in 13.06s
+61 packages are looking for funding
+  run `npm fund` for details
 
 found 0 vulnerabilities
 ```
@@ -47,7 +48,7 @@ npm start
 Exempelutskrift (då uppgiften är löst korrekt):
 
 ```shell
-> exercise-hello-world@1.0.0 start example/path/exercise-hello-world
+> exercise-hello-world@1.1.0 start
 > node src/app.js
 
 Hello, World!
@@ -61,44 +62,61 @@ För att köra applikationens test skriver du kommandot `npm test` i terminalfö
 npm test
 ```
 
-Exempelutskrift:
+Exempelutskrift då koden klarar det enda testet.
 
-```shell
-> exercise-hello-world@1.0.0 start example/path/exercise-hello-world
-> npx mocha --recursive || exit 0
+```node
+> exercise-hello-world@1.1.0 test
+> npx --node-options=--experimental-vm-modules jest || exit 0
 
-
-
+(node:20544) ExperimentalWarning: VM Modules is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ PASS  tests/hello.test.js
   sayHello
     return value
-      √ sayHello() should return 'Hello, World!'
+      √ it should return 'Hello, World!' (4 ms)
 
-
-  1 passing (4ms)
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        1.096 s
+Ran all test suites.
 ```
 
 Exempelutskrift vid fel enligt tester (den förväntade strängen returneras inte av funktionen `sayHello`).
 
-```shell
-> exercise-hello-world@1.0.0 start example/path/exercise-hello-world
-> npx mocha --recursive || exit 0
+```node
+> exercise-hello-world@1.1.0 test
+> npx --node-options=--experimental-vm-modules jest || exit 0
 
-
-
+(node:5980) ExperimentalWarning: VM Modules is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ FAIL  tests/hello.test.js
   sayHello
     return value
-      1) sayHello() should return 'Hello, World!'
+      × it should return 'Hello, World!' (4 ms)
 
+  ● sayHello › return value › it should return 'Hello, World!'
 
-  0 passing (5ms)
-  1 failing
+    expect(received).toEqual(expected) // deep equality
 
-  1) sayHello
-       return value
-         sayHello() should return 'Hello, World!':
-     AssertionError: expected 'Hi there' to equal 'Hello, World!'
-      at Context.<anonymous> (file:///example/path/exercise-hello-world/test/hello.test.js:19:35)
-      at processImmediate (internal/timers.js:456:21)
+    Expected: "Hello, World!"
+    Received: undefined
+
+      15 |   describe('return value', () => {
+      16 |     test("it should return 'Hello, World!'", () => {
+    > 17 |       expect(hello.sayHello()).toEqual('Hello, World!')
+         |                                ^
+      18 |     })
+      19 |   })
+      20 | })
+
+      at Object.<anonymous> (tests/hello.test.js:17:32)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.752 s, estimated 1 s
+Ran all test suites.
 ```
 
 #### npm run lint
@@ -112,13 +130,13 @@ npm run lint
 Skulle du till exempel indenterat koden fel och råkat skriva ett semikolon på fel plats kan du få följande utskrift:
 
 ```shell
-> exercise-hello-world@1.0.0 lint example/path/exercise-hello-world
+> exercise-hello-world@1.1.0 lint
 > npx eslint ./src || exit 0
 
 
 example/path/exercise-hello-world/src/hello.js
-  20:1   error  Expected indentation of 2 spaces but found 4  indent
-  20:27  error  Extra semicolon                               semi
+  21:1   error  Expected indentation of 2 spaces but found 4  indent
+  21:27  error  Extra semicolon                               semi
 
 ✖ 2 problems (2 errors, 0 warnings)
   2 errors and 0 warnings potentially fixable with the `--fix` option.

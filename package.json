@@ -1,6 +1,6 @@
 {
   "name": "exercise-hello-world",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "1DV025 - Exercise A - Hello, World!",
   "type": "module",
   "main": "src/app.js",
@@ -18,7 +18,7 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@lnu/eslint-config": "^1.1.5",
-    "jest": "^28.1.1"
+    "@lnu/eslint-config": "^1.1.10",
+    "jest": "^29.6.3"
   }
 }

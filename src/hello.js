@@ -1,6 +1,5 @@
 /**
- * Hello module.
- *
+ * @file Hello module.
  * @module src/hello
  * @author Johan Leitet <johan.leitet@lnu.se>
  * @author Mats Loock <mats.loock@lnu.se>

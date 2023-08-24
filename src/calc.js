@@ -1,6 +1,5 @@
 /**
- * Calc module.
- *
+ * @file Calc module.
  * @module src/calc
  * @author Johan Leitet <johan.leitet@lnu.se>
  * @author Mats Loock <mats.loock@lnu.se>

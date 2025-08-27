@@ -18,4 +18,6 @@
  */
 export function sayHello () {
   // TODO: Write your code here!
+  const greeting = 'Hello, World!'
+  return greeting
 }

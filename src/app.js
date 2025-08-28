@@ -14,6 +14,13 @@ import * as calc from './calc.js'
 // Call the function "addNumbers" in the calc module without
 // any arguments and save the result in a new variable or constant.
 // TODO: Write your code here.
-
+/**
+ * Calls the addNumbers function from the calc module and prints the result.
+ */
+function callAddNumbers () {
+  const result = calc.addNumbers(5, 3) // calls the function addNumbers from calc.js and stores the result in a constant named result
+  console.log(result)
+}
 // Print the result to the terminal (console).
 // TODO: Write your code here.
+callAddNumbers()

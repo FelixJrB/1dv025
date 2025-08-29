@@ -7,8 +7,8 @@ Syftet är att visa min progression inom webbprogrammering, Git/GitHub och moder
 ---
 
 ## 📝 Uppgifter
-- [Exercise Hello World](https://github.com/FelixJrB/1dv025/tree/exercise-hello-world)
-- [Exercise Simple Addition](https://github.com/FelixJrB/1dv025/tree/exercise-simple-addition)
+- [Exercise Hello World](https://github.com/FelixJrB/1dv025/tree/exercise-hello-world/exercise-hello-world)
+- [Exercise Simple Addition](https://github.com/FelixJrB/1dv025/tree/exercise-simple-addition/exercise-simple-addition)
 
 ---
 
